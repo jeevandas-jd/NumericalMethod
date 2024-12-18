@@ -4,20 +4,29 @@ def BinarySearch(nums,key):
     low,high=0,len(nums)-1
 
     while low<high:
-        mid=(low+high-1)//2
+        mid=(low+high)//2
 
         if nums[mid]==key:
 
             return mid
-        elif nums[mid]<high:
+        elif nums[mid]<key:
             low=mid
         else:
-            high=mid
+            high=mid-1
     
     return -1
 
+if __name__=="__main__":
+    n=int(input("enter number of elements"))
 
+    l=[]
 
-l=[1,2,3,4,5,6,7]
+    for i in range(n):
+        l.append(int(input("enter numbers/elements:>>>")))
+    k=int(input("enter key/seach element:>>>"))
+    a=BinarySearch(l,k)
 
-print(BinarySearch(l,2))
+    if a!=-1:
+        print(f"key found at index {a}")
+    else:
+        print("sorry key not found in array")
