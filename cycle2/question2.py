@@ -9,7 +9,7 @@ if __name__ == "__main__":
         return  math.exp(x)
 
 
-    x0 = 2
-    derivative = forward_difference(f, x0)
+    x0 = 1
+    derivative = forward_difference(f, x0,h=0.01)
 
     print(f"Approximate derivative of f(x) = x^2 at x = {x0} is {derivative}")

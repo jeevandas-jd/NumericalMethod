@@ -6,10 +6,10 @@ def forward_difference(f,x,h=1e-5):
 if __name__ == "__main__":
 
     def f(x):
-        return x ** 3+(2*x)**2-5*x+7
+        return x ** 3+(2*x**2)-5*x+7
 
 
     x0 = 2
-    derivative = forward_difference(f, x0)
+    derivative = forward_difference(f, x0,h=0.1)
 
     print(f"Approximate derivative of f(x) = x^2 at x = {x0} is {derivative}")
